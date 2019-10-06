@@ -6,12 +6,14 @@ namespace ClockAngle.Models
   {
     public int Hour { get; set; }
     public int Minute { get; set; }
-    public int Angle(int hour, int minute)
+    public Time(int hour, int minute)
     {
       Hour = hour;
       Minute = minute;
-      Time newTime = new Time();
-      return Hour;
+    }
+    public int Angle()
+    {
+      return (Hour*100) + Minute;
     }
   }
 }
