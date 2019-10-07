@@ -5,10 +5,14 @@ namespace ClockAngle.Controllers
 {
   public class AngleController : Controller
   {
-    [Route("/angle")]
-    public ActionResult Index()
+    [Route("/calculated")]
+    public ActionResult Index(int hour, int minute)
     {
-      return View();
+      Time newTime = new Time(hour, minute);
+      newTime.Hour = hour;
+      newTime.Minute = minute;
+      int result = newTime.Angle();
+      return View(newTime);
     }
   }
 }

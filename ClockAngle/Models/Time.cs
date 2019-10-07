@@ -13,6 +13,7 @@ namespace ClockAngle.Models
     }
     public int Angle()
     {
+      Console.WriteLine(Minute);
       return (Hour*100) + Minute;
     }
   }
