@@ -8,11 +8,18 @@ namespace ClockAngle.Tests
   public class TimeTest
   {
     [TestMethod]
-    public void Angle_ConvertToDegrees_Int()
+    public void Angle_IfToDegrees_Int()
     {
-      Time newTime = new Time(5, 30);
+      Time newTime = new Time(1, 10);
       int result = newTime.Angle();
-      Assert.AreEqual(530, result);
+      Assert.AreEqual(30, result);
+    }
+    [TestMethod]
+    public void Angle_ElseToDegrees_Int()
+    {
+      Time newTime = new Time(2, 05);
+      int result = newTime.Angle();
+      Assert.AreEqual(30, result);
     }
   }
 }
