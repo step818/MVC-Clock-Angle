@@ -4,4 +4,7 @@
 
 <p>@Model.Hour</p>
 <p>@Model.Minute</p>
-<p>@Model.result</p>
+@foreach (Time myTime in Model)
+{
+  <p>@myTime.Angle()</p>
+}
