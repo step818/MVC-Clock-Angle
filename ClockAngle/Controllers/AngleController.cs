@@ -11,7 +11,7 @@ namespace ClockAngle.Controllers
       Time newTime = new Time(hour, minute);
       newTime.Hour = hour;
       newTime.Minute = minute;
-      int result = newTime.Angle();
+      
       return View(newTime);
     }
   }

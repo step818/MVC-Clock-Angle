@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 
 namespace ClockAngle.Models
 {
@@ -6,7 +7,7 @@ namespace ClockAngle.Models
   {
     public int Hour { get; set; }
     public int Minute { get; set; }
-    private int _angle;
+    private int _angle = 0;
     public Time(int hour, int minute)
     {
       Hour = hour;
