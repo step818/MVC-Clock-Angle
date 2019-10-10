@@ -3,4 +3,13 @@
 <h1>Angle</h1>
 
 <p>@Model.Hour : @Model.Minute</p>
-<p>@Model.Angle() degrees</p> 
+<p>@Model.Validate()</p>
+@if(Model.Validate() == "")
+{
+<p>One angle is @Model.Angle() degrees</p> 
+<p>And the other positive angle is @Model.ExplementaryAngle() degrees</p>
+}
+else{
+  <p>:)</p>
+}
+<a href="/">Go back</a>
